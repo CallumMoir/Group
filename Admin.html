@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Admin</title>
+    <link rel="stylesheet" type="text/css" href="CSS/Style.css">
+  </head>
+  <body>
+      <div id="Menu">
+        <div id="PageMenu">
+          <div class="topnav">
+            <a href="Meals.html"> Meals </a>
+            <a href="DrawingPage.html"> Drawing Page </a>
+            <a href="Saftey.html"> Saftey </a>
+            <a href="Random_Recipe.html"> Random Recipe</a>
+            <a href="About.html"> About Us</a>
+          </div>
+        </div>
+      </div>
+    <article>
+
+      <button id="TestButon">Test</button>
+
+      <div id="PageTitle">
+        <h1 id="Title">Admin</h1>
+      </div>
+      <div id="AdminInputs">
+        <div id="AdminArtTitle">
+          <input class="ArtInput" id="ArtTitle" placeholder="Article Name">
+        </div>
+        <div id="AdminArtFinPic">
+          <input class="ArtInput" id="ArtFinPic" placeholder="Finished Picture">
+        </div>
+        <div id="AdminArtStep1">
+          <textarea class="ArtInput" id="ArtStep1" placeholder="Step 1"></textarea>
+        </div>
+        <div id="AdminArtStep1Pic">
+          <input class="ArtInput" id="ArtStep1Pic" placeholder="Step 1 Picture">
+        </div>
+        <div id="ArtSteps">
+        </div>
+        <div id="AddStepDiv">
+          <button id="AddStep">Add Step</button>
+        </div>
+
+
+      </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script>
+        var dumb = "A";
+
+        $('#TestButon').click(function(){
+        $.ajax({
+          url: 'Recipies.php',
+          data: {button: dumb},
+          error: function onError(err) {
+            console.log(err);
+          },
+          success: function onSuccess(result) {
+            console.log(result);
+          }
+
+        })
+})
+
+
+      </script>
+    </article>
+  </body>
+</html>
