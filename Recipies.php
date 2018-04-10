@@ -7,7 +7,7 @@ $contents = file_get_contents('Recipies.txt');
 $data = json_decode($contents, true);
 
 if(count($data) == 0){
-  $data = array('ButtonAViews' => 0, 'ButtonBViews' => 0)
+  $data = array('ButtonAViews' => 0, 'ButtonBViews' => 0);
 }
 
 
